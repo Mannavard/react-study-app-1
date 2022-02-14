@@ -6,6 +6,11 @@ const ExpenseForm = (props) => {
   const [amount, setAmount] = useState('');
   const [date, setDate] = useState('');
 
+  const resetForm = () => {
+    setTitle('');
+    setAmount('');
+    setDate('');
+  };
   const addExpenseHandler = (event) => {
     event.preventDefault();
     if (!title || !amount || !date) {
@@ -17,9 +22,7 @@ const ExpenseForm = (props) => {
       date: new Date(date),
     };
     props.onFormSubmit(payload);
-    setTitle('');
-    setAmount('');
-    setDate('');
+    resetForm();
   };
   const onTitleChangeHandler = (event) => {
     setTitle(event.target.value)

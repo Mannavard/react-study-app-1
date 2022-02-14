@@ -14,12 +14,12 @@ const ExpenseItem = props => {
                      xl:mb-4
                      last:mb-0">
       <div className="grow w-full mb-1
-                      xl:grow-0 xl:w-2/12 xl:pr-8 xl:mb-4">
+                      xl:grow-0 xl:w-2/12 xl:pr-8 xl:mb-0">
         <ExpenseDate date={props.date}/>
       </div>
 
       <div className="grow w-full mb-1 text-center text-white text-xl font-bold
-                      xl:grow-0 xl:w-8/12 xl:text-left xl:text-3xl xl:mb-4">
+                      xl:grow-0 xl:w-8/12 xl:text-left xl:text-3xl xl:mb-0">
         {props.title}
       </div>
 

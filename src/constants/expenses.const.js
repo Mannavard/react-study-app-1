@@ -3,7 +3,7 @@ export const EXPENSES = [
     id: 'e1',
     title: 'Toilet Paper',
     amount: 94.12,
-    date: new Date(2020, 7, 14),
+    date: new Date(2022, 7, 14),
   },
   {
     id: 'e2',
@@ -28,5 +28,23 @@ export const EXPENSES = [
     title: 'Jack Daniels',
     amount: 50,
     date: new Date(2021, 6, 7),
+  },
+  {
+    id: 'e6',
+    title: 'Jack Daniels',
+    amount: 50,
+    date: new Date(2022, 6, 7),
+  },
+  {
+    id: 'e7',
+    title: 'Jim Bean',
+    amount: 30,
+    date: new Date(2019, 3, 8),
+  },
+  {
+    id: 'e8',
+    title: 'Stolichnaya',
+    amount: 5,
+    date: new Date(2019, 3, 30),
   },
 ];
