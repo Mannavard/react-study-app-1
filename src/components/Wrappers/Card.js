@@ -1,5 +1,5 @@
 const Card = props => {
-  const cssClasses = 'p-4 rounded-3xl ' + props.className;
+  const cssClasses = 'p-2 rounded-3xl xl:p-4 ' + props.className;
 
   return (
     <div className={cssClasses}>
