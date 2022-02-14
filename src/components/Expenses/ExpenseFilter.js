@@ -15,6 +15,7 @@ const ExpenseFilter = props => {
     setSelectedYear(selectedYear);
     setExpensesByYearTotalCount(expensesByYear?.length);
     setExpenseMonthsCount(getDataForChartByYear(expensesByYear));
+    props.onYearSelect(selectedYear);
   }
 
   return (
@@ -62,5 +63,6 @@ const getDataForChartByYear = (expensesByYear) => {
 
   return months;
 }
+
 
 export default ExpenseFilter;

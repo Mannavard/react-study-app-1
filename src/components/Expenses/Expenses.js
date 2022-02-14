@@ -1,20 +1,31 @@
+import { useState } from "react";
+
 import Card from "../Wrappers/Card";
 import ExpenseItem from "./ExpenseItem";
 import ExpenseFilter from "./ExpenseFilter";
 
 
 const Expenses = props => {
-  const expenseItems = getExpenseItems(props.data);
+  const [expenseItems, setExpenseItems] = useState(props.data);
+  const yearSelectHandler = (year) => {
+    setExpenseItems(() => {
+      if (!year) {
+        return props.data;
+      } else {
+        return props.data.filter(expense => expense.date.getFullYear() === year);
+      }
+    });
+  }
 
   return (
     <div>
-      <ExpenseFilter data={props.data}/>
+      <ExpenseFilter data={props.data} onYearSelect={yearSelectHandler}/>
       <Card className="bg-gray-900">
         <h2 className="pb-4 text-2xl text-white font-bold
-                     xl:text-4xl xl:pb-8">
+                       xl:text-4xl xl:pb-8">
           Expense items
         </h2>
-        {expenseItems}
+        {getExpenseItems(expenseItems)}
       </Card>
     </div>
   );

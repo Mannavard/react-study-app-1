@@ -9,7 +9,9 @@ import NewExpense from "./components/NewExpense/NewExpense";
 const App = () => {
   const [expenses, setExpenses] = useState(EXPENSES);
   const addExpenseItem = (expenseItem) => {
-    setExpenses([...expenses, expenseItem]);
+    setExpenses((previousExpenses) => {
+      return [expenseItem, ...previousExpenses]
+    });
   };
 
   return (

@@ -20,7 +20,6 @@ const getChartItems = (months, data) => {
     let result;
     const calc = (data.monthsData[month] / data.totalMonthCount * 100);
     result = `h-[${calc || 0}%]`;
-    console.log(result);
     return <div className="flex flex-col items-center" key={index}>
       <div className="relative overflow-hidden h-32 w-2 mb-1 border border-indigo-600 rounded-3xl bg-indigo-200 xl:w-4">
         <div className={"absolute bottom-0 w-full bg-indigo-600 transition-all ease-in-out duration-500 " + result}/>
