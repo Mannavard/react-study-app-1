@@ -32,7 +32,7 @@ const ExpenseFilter = props => {
 
 
 const getYearSelectOptions = (years) => {
-  const placeHolderOption = <option key="" value="" disabled>Select year:</option>;
+  const placeHolderOption = <option key="" value="">All years</option>;
   const sortedUniqueYears = years.filter((item, index, array) => array.indexOf(item) === index).sort();
   const createOptions = () => {
     return sortedUniqueYears.map((year, index) => {
