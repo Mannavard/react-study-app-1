@@ -33,6 +33,9 @@ const ExpenseForm = (props) => {
   const onDateChangeHandler = (event) => {
     setDate(event.target.value)
   };
+  const hideFormHandler = () => {
+    props.onHideForm();
+  }
 
   return (
     <form className="w-full h-full" onSubmit={addExpenseHandler}>
@@ -48,6 +51,7 @@ const ExpenseForm = (props) => {
         <label className="mb-1 text-white text-lg font-semibold">Date</label>
         <input className="rounded appearance-none shadow p-2" type="date" min="2020-01-01" max="2022-02-14" value={date} onChange={onDateChangeHandler}/>
       </div>
+      <button className="w-full p-2 mb-2 rounded-xl text-white text-xl font-bold bg-indigo-800" onClick={hideFormHandler}>Cancel</button>
       <button className="w-full p-2 rounded-xl text-white text-xl font-bold bg-indigo-800" type="submit">Add expense</button>
     </form>
   );
